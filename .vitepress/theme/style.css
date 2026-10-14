@@ -1,0 +1,267 @@
+:root {
+  --vp-c-brand-1: #365e7d;
+  --vp-c-brand-2: #447897;
+  --vp-c-brand-3: #365e7d;
+  --vp-c-brand-soft: rgba(54, 94, 125, 0.12);
+  --vp-c-bg: #ffffff;
+  --vp-c-bg-alt: #f5f6f8;
+  --vp-c-bg-soft: #f3f4f6;
+  --vp-c-divider: #e2e5e9;
+  --vp-c-text-1: #17212f;
+  --vp-c-text-2: #586370;
+  --vp-nav-height: 64px;
+  --vp-layout-max-width: 1152px;
+}
+
+.dark {
+  --vp-c-brand-1: #9fc7df;
+  --vp-c-brand-2: #8bb9d4;
+  --vp-c-brand-3: #365e7d;
+  --vp-c-brand-soft: rgba(159, 199, 223, 0.14);
+  --vp-c-bg: #20242c;
+  --vp-c-bg-alt: #171b21;
+  --vp-c-bg-soft: #292f38;
+  --vp-c-divider: #373e49;
+  --vp-c-text-1: #e4e8ef;
+  --vp-c-text-2: #b3bdc9;
+}
+
+.Layout {
+  background: var(--vp-c-bg-alt);
+}
+
+.VPNavBar:not(.home) {
+  background: var(--vp-c-bg);
+}
+
+.VPDoc {
+  padding: 32px 24px 48px;
+}
+
+.VPDoc .content,
+.VPDoc:not(.has-sidebar) .content {
+  padding: 0;
+  max-width: 768px;
+}
+
+.VPDoc .content-container {
+  max-width: none;
+  padding: 30px 36px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 8px;
+  background: var(--vp-c-bg);
+  box-shadow: 0 3px 12px rgba(20, 32, 47, 0.035);
+}
+
+.vp-doc > div > :last-child {
+  margin-bottom: 0;
+}
+
+.VPDocFooter:empty {
+  display: none;
+}
+
+.vp-doc h2 {
+  margin: 28px 0 10px;
+  padding: 0;
+  border: 0;
+}
+
+.vp-doc h3 {
+  margin-top: 20px;
+}
+
+.vp-doc > div > h1 + p {
+  margin: 12px 0 24px;
+  color: var(--vp-c-text-2);
+}
+
+.vp-doc a {
+  font-weight: 400;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.vp-doc ul {
+  padding-left: 20px;
+}
+
+.vp-doc li + li {
+  margin-top: 10px;
+}
+
+.record-empty,
+.record-description {
+  color: var(--vp-c-text-2);
+}
+
+.vp-doc .record-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 12px 0 0;
+}
+
+.record-list li {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--vp-c-divider);
+}
+
+.record-list li:last-child {
+  border-bottom: 0;
+}
+
+.record-title-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.record-title-row a {
+  overflow-wrap: anywhere;
+}
+
+.record-title-row time {
+  flex-shrink: 0;
+  font-family: var(--vp-font-family-mono);
+  font-size: 12px;
+  color: var(--vp-c-text-2);
+}
+
+.vp-doc .record-description {
+  margin: 4px 0 0;
+  font-size: 14px;
+}
+
+.VPFooter {
+  background: transparent;
+  border-color: transparent;
+}
+
+.topic-index {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  padding: 16px 0 22px;
+  border-bottom: 1px solid var(--vp-c-divider);
+}
+
+.vp-doc .topic-index > a {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  text-decoration: none;
+}
+
+.topic-title {
+  font-family: var(--vp-font-family-base);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.topic-title > span {
+  margin-left: 8px;
+  font-family: sans-serif;
+  font-size: 14px;
+}
+
+.topic-detail {
+  font-size: 14px;
+  color: var(--vp-c-text-2);
+}
+
+.records-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 24px 0 12px;
+}
+
+.vp-doc .records-heading h2 {
+  margin: 0;
+}
+
+.records-heading a {
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.record-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.record-filters button {
+  padding: 5px 12px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  color: var(--vp-c-text-2);
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.record-filters button[aria-pressed='true'] {
+  border-color: var(--vp-c-divider);
+  color: var(--vp-c-text-1);
+  background: var(--vp-c-bg-soft);
+}
+
+.record-filters button:hover {
+  background: var(--vp-c-bg-soft);
+}
+
+.record-filters button:focus-visible,
+.topic-index a:focus-visible {
+  outline: 2px solid var(--vp-c-brand-1);
+  outline-offset: 3px;
+}
+
+.vp-doc .home-meta {
+  margin-top: 24px;
+  padding-top: 10px;
+  border-top: 1px solid var(--vp-c-divider);
+  font-size: 13px;
+}
+
+.home-meta p {
+  margin-bottom: 0;
+}
+
+@media (min-width: 1280px) {
+  .VPDoc.has-aside .content {
+    max-width: 768px;
+  }
+
+  .VPDoc.has-aside .container {
+    max-width: 1024px;
+  }
+}
+
+@media (max-width: 767px) {
+  .VPDoc {
+    padding: 20px 12px 28px;
+  }
+
+  .VPDoc .content-container {
+    padding: 22px 20px;
+  }
+
+  .record-title-row {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .topic-index {
+    gap: 12px;
+  }
+
+  .topic-title {
+    font-size: 16px;
+  }
+
+  .record-filters button {
+    min-height: 40px;
+  }
+}
