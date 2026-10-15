@@ -77,8 +77,6 @@ git commit -m "添加学习笔记"
 
 已准备 GitHub Pages 工作流 `.github/workflows/deploy-pages.yml`，每次推送 `main` 都自动构建发布。Pages 需要在仓库设置中启用 GitHub Actions；基础路径从平台自动读取。
 
-同时保留 `vercel.json`，以后可以直接把同一个仓库导入 Vercel，输出目录是 `.vitepress/dist`。Vercel 部署时不设置 `VITEPRESS_BASE`。
-
 初始版本只包含首页、分类、归档与关于页，尚未添加个人文章。
 
 ## 初始验收
